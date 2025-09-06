@@ -1,42 +1,40 @@
-public import java.util.*;
-public class Shein
-{
+import java.util.*;
+
+public class Shein {
     int total;
-    public void dis()
-    {
-        int price=0,total=0;
-        char ch='y';
-        do
-        {
-            Scanner sc=new Scanner(System.in);
+
+    public void dis() {
+        int price = 0, total = 0;
+        char ch = 'y';
+        do {
+            Scanner sc = new Scanner(System.in);
             System.out.println("1. T-Shirts");
             System.out.println("2. Pants");
-            System.out.println("3. Dresses");            
+            System.out.println("3. Dresses");
             System.out.println(" Please enter you choice of clothing");
-            int a=sc.nextInt();
-            switch(a)
-            {
+            int a = sc.nextInt();
+            switch (a) {
                 case 1:
-                    price=350;
+                    price = 350;
                     break;
                 case 2:
-                    price=070;
+                    price = 070;
                     break;
-                    case 3:
-                    price=550;
+                case 3:
+                    price = 550;
                     break;
-                default :
+                default:
                     System.out.println("Invalid Choice! Please try again");
-                break;
+                    break;
             }
             System.out.println("Enter the amount of Clothes you want to buy:");
-            a=sc.nextInt();
-            price=price*a;
+            a = sc.nextInt();
+            price = price * a;
             System.out.println("Do you want to buy any more of Clothes(y/n): ");
-            ch=sc.next().charAt(0);
-            total=total+price;
-        }while(ch=='y' || ch=='Y');
-        System.out.println("\t\t\t\tYour Shein bill is: " +total+"\t\t\t\t\t");
+            ch = sc.next().charAt(0);
+            total = total + price;
+        } while (ch == 'y' || ch == 'Y');
+        System.out.println("\t\t\t\tYour Shein bill is: " + total + "\t\t\t\t\t");
         System.out.println("\t\t\t\tThank you for visiting Shein!\t\t\t\t\t");
     }
 }
